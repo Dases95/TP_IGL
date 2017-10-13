@@ -47,10 +47,11 @@ public class VectorHelper
 			for(int i = 0;i <= table1.length;i++){
 				table[i]=table1[i]+table2[i];
 			}
+			return table;
 		}catch(lengthException e){
 			System.out.println(e.getMessage());
+			return null;
 		}
-		return null;
 	}
 /*
  * @param
@@ -59,6 +60,13 @@ public class VectorHelper
  * @example {1,2,3} --> {3,2,1}
  */	
     public int[] inverseVecteur(int[] table){
+    	int index,contenair;
+    	index = 0;
+    	while(index <= table.length/2){
+    		contenair = table[table.length-index-1];
+    		table[index] = contenair;
+    		index++;
+    	}
     	return null;
     }
 	
