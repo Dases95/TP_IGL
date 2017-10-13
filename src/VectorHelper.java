@@ -16,7 +16,7 @@ public class VectorHelper
 	}
 	
 	
-/* @param
+/* @param t
  * @return
  * trier les elements d'un tableau
  */
