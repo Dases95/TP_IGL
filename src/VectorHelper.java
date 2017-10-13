@@ -43,7 +43,7 @@ public class VectorHelper
 			if(table1.length != table2.length){
 				throw new lengthException("il faut que les deux tableau soit de meme taille");
 			}
-			int[] table;
+			int[] table = null;
 			for(int i = 0;i <= table1.length;i++){
 				table[i]=table1[i]+table2[i];
 			}
