@@ -16,11 +16,22 @@ public class VectorHelper
 	}
 	
 	
-/* @param
+/* @param 
  * @return
  * trier les elements d'un tableau
  */
-	public void TriTable(int[] table){}
+	public void TriTable(int[] table){
+		int contenair;
+		for (int i=0 ;i<= table.length-1;i++){
+			for(int j =i+1;j<=table.length;j++){
+				if(table[j]<table[i]){
+					contenair = table[i];
+					table[i] = table[j];
+					table [j] = contenair;
+				}
+			}
+		}
+	}
 	
 /*
  * @param
