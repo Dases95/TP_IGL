@@ -89,6 +89,19 @@ public class VectorHelper
     	}
     	return minMaxVecteur;
     }
-	
-	
+	/**
+	 * 
+	 */
+    public void powerTable(int[] table,int nbr ){
+  		if (nbr == 0){
+  			for(int element : table){
+  				element = 1;	
+  			 }
+  		}else{
+  	      int index = 1;
+  	      
+  		    
+  		}
+  		
+  	}
 }
