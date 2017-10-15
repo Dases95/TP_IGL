@@ -11,20 +11,7 @@
  */
 public class VectorHelper 
 {
-	private int[] table_1;
-	private int[] table_2;
-	
-	
-/**
- * Ajouter un nouveau element au vecteur 
- * @param	le vecteur et l'element a ajouter
- * @example {1,2} num = 3 -> {1,2,3}
- **/
 
-	public void addElement(int num,int[] table){
-		   table[table.length] = num;	   
-	}
-	
 	
 /**
  * Trier les elements d'un tableau
@@ -56,11 +43,10 @@ public class VectorHelper
 			if(table1.length != table2.length){
 				throw new lengthException("il faut que les deux tableau soit de meme taille");
 			}
-			int[] table = null;
-			for(int i = 0;i <= table1.length;i++){
-				table[i]=table1[i]+table2[i];
+			for(int i = 0;i < table1.length;i++){
+				table1[i]=table1[i]+table2[i];
 			}
-			return table;
+			return table1;
 		}catch(lengthException e){
 			System.out.println(e.getMessage());
 			return null;
@@ -71,11 +57,12 @@ public class VectorHelper
  * @param le vecteur a inverser
  * @example {1,2,3} --> {3,2,1}
  */	
-    public void inverseVecteur(int[] table){
+	public void inverseVecteur(int[] table){
     	int index,contenair;
     	index = 0;
     	while(index <= table.length/2){
     		contenair = table[table.length-index-1];
+    		table[table.length-index-1] = table[index];
     		table[index] = contenair;
     		index++;
     	}
@@ -88,7 +75,7 @@ public class VectorHelper
   * @example {1,2,3} min = 1 max = 3
   */	
     public int[] minMax(int[] table){
-    	int[] minMaxVecteur = null;
+    	int [] minMaxVecteur = new int[2] ;
     	minMaxVecteur[0] = table[0];
     	minMaxVecteur[1] = table[0];
     	int contenair;
@@ -102,8 +89,15 @@ public class VectorHelper
     	}
     	return minMaxVecteur;
     }
+	/**
+	 * 
+	 */
     public void powerTable(int[] table,int nbr ){
-    	
+  		if (nbr == 0){
+  			for(int element : table){
+  				element = 1;	
+  			 }
+  		}else{
   	      int index = 1;
   	      
   		    for(int i=0;i < table.length;i++){
@@ -114,9 +108,8 @@ public class VectorHelper
   		  		 index++;
   		  	   }
                 index = 1;
-  		    }
+  		  }
+  		}
   		
-		
-	}
-	
+  	}
 }
