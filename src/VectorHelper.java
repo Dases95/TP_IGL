@@ -100,7 +100,15 @@ public class VectorHelper
   		}else{
   	      int index = 1;
   	      
-  		    
+  		    for(int i=0;i < table.length;i++){
+  		        int contenair= table[i];
+  		        while(index < nbr ){
+  		            
+  		     	 table[i]= contenair*table[i];
+  		  		 index++;
+  		  	   }
+                index = 1;
+  		  }
   		}
   		
   	}
