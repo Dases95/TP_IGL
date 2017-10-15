@@ -87,20 +87,36 @@ public class VectorHelper
   * et la deuxieme contier le max 
   * @example {1,2,3} min = 1 max = 3
   */	
-    public int[2] minMax(int[] table){
-    	int[2] minMaxVecteur;
+    public int[] minMax(int[] table){
+    	int[] minMaxVecteur = null;
     	minMaxVecteur[0] = table[0];
     	minMaxVecteur[1] = table[0];
     	int contenair;
     	for(int element : table){
-    		if(element < minMax[0]){
-    			minMax[0] = element;
+    		if(element < minMaxVecteur[0]){
+    			minMaxVecteur[0] = element;
     		}
-            if(element > minMax[1]){
-            	minMax[1] = element;
+            if(element > minMaxVecteur[1]){
+            	minMaxVecteur[1] = element;
     		}
     	}
     	return minMaxVecteur;
     }
+    public void powerTable(int[] table,int nbr ){
+    	
+  	      int index = 1;
+  	      
+  		    for(int i=0;i < table.length;i++){
+  		        int contenair= table[i];
+  		        while(index < nbr ){
+  		            
+  		     	 table[i]= contenair*table[i];
+  		  		 index++;
+  		  	   }
+                index = 1;
+  		    }
+  		
+		
+	}
 	
 }
