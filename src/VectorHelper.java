@@ -1,11 +1,12 @@
 /**
  *  la classe VectorHelper assure les operations suivantes
- *  Trier les element d'un vecteur
- *  Somme de deux vecteur
- *  Inverse les elements d'un vecteur
- *  Obtenir le min et le max d'un vecteur
- *  Appliquer une formule sous forme de fonction  a tout les elements du  vecteur 
- *  
+ * <ul> 
+ *  <li>Trier les element d'un vecteur</li>
+ *  <li>Somme de deux vecteur</li>
+ *  <li>Inverse les elements d'un vecteur</li>
+ *  <li>Obtenir le min et le max d'un vecteur</li>
+ *  <li>Appliquer une formule sous forme de fonction  a tout les elements du  vecteur </li>
+ *  </ul>
  *@author Djebablia Abderrahim
  *@version 2017.10.14
  */
@@ -15,8 +16,8 @@ public class VectorHelper
 	
 /**
  * Trier les elements d'un tableau
- * @param le tableaux qu'on veut  trier
- * @example {5,3,7} --> {3,5,7}
+ * @param table le tableaux qu'on veut  trier
+ * <br><strong>Example</strong> : table = {5,3,7}   resultat = {3,5,7}--
  */
 	public void TriTable(int[] table){
 		int contenair = 0;
@@ -34,10 +35,10 @@ public class VectorHelper
 	
 /**
  * Sommer de deux victeurs si possible
- * @param les deux tableau qu'on veut calcule 
+ * @param table1 le premier tableau de l'operation   
+ * @param table2 l deuxieme tableau de l'opertation 
  * @return la somme de deux victeeur
- * @throws lengthException si les deux vecteur ne sont pas de la méme taille
- * @example table1= {1,2,3} et table2 = {4,5,6} resultat = {5,7,9} 
+ * <br><strong>Example</strong> : table1= {1,2,3}  table2 = {4,5,6} resultat = {5,7,9} 
  */	
 	public int[] sommeVecteur(int[] table1,int[] table2){
 		try{
@@ -55,8 +56,8 @@ public class VectorHelper
 	}
 /**
  * Inverser les elements du vecteur
- * @param le vecteur a inverser
- * @example {1,2,3} --> {3,2,1}
+ * @param table le vecteur a inverser
+ * <br><strong>Example</strong> : table = {1,2,3} resultat = {3,2,1}
  */	
 	public void inverseVecteur(int[] table){
     	int index,contenair;
@@ -69,11 +70,11 @@ public class VectorHelper
     	}
     }
  /**
-  * Obtenir le min et le max d'un vecteur
-  * @param le vecteur dedier au calucle du min et amx
+  * Obtenir le Min et le Max d'un vecteur
+  * @param table le vecteur dedier au calucle du Min et Max
   * @return un vecteur de taille = 2 la premier case contier le min 
-  * et la deuxieme contier le max 
-  * @example {1,2,3} min = 1 max = 3
+  * et la deuxieme contier le Max 
+  * <br><strong>Example</strong> : table = {1,2,3} Min = 1 Max = 3
   */	
     public int[] minMax(int[] table){
     	int [] minMaxVecteur = new int[2] ;
@@ -94,7 +95,7 @@ public class VectorHelper
      * Applique l'operation puissance a tout les element d'un vecteur
      * @param table  le vecteur dedier au calucle du puissance
      * @param nbr    la puissance  
-     * @example {1,2,3} nbr = 3 --> {1,8,27}
+     * <br><strong>Example</strong> :  table = {1,2,3} nbr = 3 resultat {1,8,27}
 	 */
     public void powerTable(int[] table,int nbr ){
   		if (nbr == 0){
