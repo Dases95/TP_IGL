@@ -90,8 +90,11 @@ public class VectorHelper
     	}
     	return minMaxVecteur;
     }
-	/**
-	 * 
+    /**
+     * Applique l'operation puissance a tout les element d'un vecteur
+     * @param table  le vecteur dedier au calucle du puissance
+     * @param nbr    la puissance  
+     * @example {1,2,3} nbr = 3 --> {1,8,27}
 	 */
     public void powerTable(int[] table,int nbr ){
   		if (nbr == 0){
