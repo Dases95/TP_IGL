@@ -19,9 +19,9 @@ public class VectorHelper
  * @example {5,3,7} --> {3,5,7}
  */
 	public void TriTable(int[] table){
-		int contenair;
-		for (int i=0 ;i<= table.length-1;i++){
-			for(int j =i+1;j<=table.length;j++){
+		int contenair = 0;
+		for (int i=0 ;i<table.length;i++){
+			for(int j =i+1;j<table.length;j++){
 				if(table[j]<table[i]){
 					contenair = table[i];
 					table[i] = table[j];
@@ -31,9 +31,10 @@ public class VectorHelper
 		}
 	}
 	
+	
 /**
  * Sommer de deux victeurs si possible
- * @param les deux tableau qu'on veut leur somme 
+ * @param les deux tableau qu'on veut calcule 
  * @return la somme de deux victeeur
  * @throws lengthException si les deux vecteur ne sont pas de la méme taille
  * @example table1= {1,2,3} et table2 = {4,5,6} resultat = {5,7,9} 
@@ -69,7 +70,7 @@ public class VectorHelper
     }
  /**
   * Obtenir le min et le max d'un vecteur
-  * @param table le vecteur dedier au calucle du min et max
+  * @param le vecteur dedier au calucle du min et amx
   * @return un vecteur de taille = 2 la premier case contier le min 
   * et la deuxieme contier le max 
   * @example {1,2,3} min = 1 max = 3
@@ -90,10 +91,7 @@ public class VectorHelper
     	return minMaxVecteur;
     }
 	/**
-     * Applique l'operation puissance a tout les element d'un vecteur
-     * @param table  le vecteur dedier au calucle du puissance
-     * @param nbr    la puissance  
-     * @example {1,2,3} nbr = 3 --> {1,8,27}
+	 * 
 	 */
     public void powerTable(int[] table,int nbr ){
   		if (nbr == 0){
@@ -109,9 +107,9 @@ public class VectorHelper
   		            
   		     	 table[i]= contenair*table[i];
   		  		 index++;
-  		  	    }
+  		  	   }
                 index = 1;
-  		    }
+  		  }
   		}
   		
   	}
