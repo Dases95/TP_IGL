@@ -62,7 +62,7 @@ public class VectorHelper
 	public void inverseVecteur(int[] table){
     	int index,contenair;
     	index = 0;
-    	while(index <= table.length/2){
+    	while(index < table.length/2){
     		contenair = table[table.length-index-1];
     		table[table.length-index-1] = table[index];
     		table[index] = contenair;
